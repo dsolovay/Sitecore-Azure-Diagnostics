@@ -21,7 +21,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell
     /// <contract>
     ///   <requires name="e" condition="not null" />
     /// </contract>
-    protected override void OnLoad([NotNull] EventArgs e)
+    protected override void OnLoad(EventArgs e)
     {
       Assert.ArgumentNotNull(e, "e");
 

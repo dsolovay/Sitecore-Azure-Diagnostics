@@ -39,7 +39,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Reports.LogViewer
     /// <contract>
     ///   <requires name="e" condition="not null"/>
     ///   </contract>
-    protected override void OnLoad([NotNull] EventArgs e)
+    protected override void OnLoad(EventArgs e)
     {
       Assert.ArgumentNotNull(e, "e");
       Assert.CanRunApplication("/sitecore/content/Applications/Tools/Log Viewer");

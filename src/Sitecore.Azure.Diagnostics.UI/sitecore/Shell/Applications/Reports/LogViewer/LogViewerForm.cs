@@ -35,7 +35,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Reports.LogViewer
     /// Raises the load event.
     /// </summary>
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-    protected override void OnLoad([NotNull] EventArgs e)
+    protected override void OnLoad(EventArgs e)
     {
       Assert.ArgumentNotNull(e, "e");
 
@@ -58,7 +58,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Reports.LogViewer
     ///   <requires name="args" condition="not null" />
     /// </contract>
     [HandleMessage("logviewer:delete", true)]
-    public void Delete([NotNull] ClientPipelineArgs args)
+    public void Delete(ClientPipelineArgs args)
     {
       Assert.ArgumentNotNull(args, "args");
 
@@ -111,7 +111,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Reports.LogViewer
     ///   <requires name="message" condition="not null" />
     /// </contract>
     [HandleMessage("logviewer:download")]
-    public void Download([NotNull] Message message)
+    public void Download(Message message)
     {
       Assert.ArgumentNotNull(message, "message");
 
@@ -138,7 +138,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Reports.LogViewer
     ///   <requires name="args" condition="not null" />
     /// </contract>
     [HandleMessage("logviewer:open", true)]
-    public void Open([NotNull] ClientPipelineArgs args)
+    public void Open(ClientPipelineArgs args)
     {
       Assert.ArgumentNotNull(args, "args");
 
@@ -175,7 +175,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Reports.LogViewer
     ///   <requires name="message" condition="not null" />
     /// </contract>
     [HandleMessage("logviewer:refresh")]
-    public void Refresh([NotNull] Message message)
+    public void Refresh(Message message)
     {
       Assert.ArgumentNotNull(message, "message");
 
@@ -193,7 +193,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Reports.LogViewer
     /// <contract>
     ///   <requires name="filename" condition="none" />
     /// </contract>
-    private void SetBlob([CanBeNull] string blobName)
+    private void SetBlob(string blobName)
     {
       if (string.IsNullOrEmpty(blobName))
       {

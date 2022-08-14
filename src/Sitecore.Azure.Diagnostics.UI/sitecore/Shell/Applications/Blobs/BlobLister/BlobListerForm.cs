@@ -106,7 +106,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Blobs.BlobLister
     /// property to determine whether the page is being loaded in response to a client postback,
     /// or if it is being loaded and accessed for the first time.
     /// </remarks>
-    protected override void OnLoad([NotNull] EventArgs e)
+    protected override void OnLoad(EventArgs e)
     {
       Assert.ArgumentNotNull(e, "e");
 
@@ -178,7 +178,7 @@ namespace Sitecore.Azure.Diagnostics.UI.Shell.Applications.Blobs.BlobLister
     /// When the user clicks OK, the dialog is closed by calling
     /// the <see cref="Sitecore.Web.UI.Sheer.ClientResponse.CloseWindow">CloseWindow</see> method.
     /// </remarks>
-    protected override void OnOK([NotNull] object sender, [NotNull] EventArgs args)
+    protected override void OnOK(object sender, EventArgs args)
     {
       Assert.ArgumentNotNull(sender, "sender");
       Assert.ArgumentNotNull(args, "args");
