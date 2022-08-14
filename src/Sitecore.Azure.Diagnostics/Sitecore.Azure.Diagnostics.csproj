@@ -10,10 +10,11 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sitecore.Azure.Diagnostics</RootNamespace>
     <AssemblyName>Sitecore.Azure.Diagnostics</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,16 +58,16 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Client, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Client.NoReferences.8.1.160519\lib\NET45\Sitecore.Client.dll</HintPath>
+    <Reference Include="Sitecore.Client, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Sitecore.Client.10.2.0\lib\NET48\Sitecore.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Kernel, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.1.160519\lib\NET45\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel, Version=17.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Sitecore.Kernel.10.2.0\lib\NET48\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Logging, Version=1.2.0.30715, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Logging.NoReferences.8.1.160519\lib\NET45\Sitecore.Logging.dll</HintPath>
+    <Reference Include="Sitecore.Logging, Version=14.1.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Sitecore.Logging.10.2.0\lib\NET48\Sitecore.Logging.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
