@@ -3,13 +3,14 @@ using Sitecore.Diagnostics.PerformanceCounters;
 using Sitecore.Tasks;
 using System;
 using System.Collections.Generic;
+using Sitecore.Publishing.Pipelines.PublishItem;
 
 namespace Sitecore.Azure.Diagnostics.Tasks
 {
   /// <summary>
   /// Represents the agent to clean up the blobs data.
   /// </summary>
-  public class BlobsCleanupAgent : BaseAgent
+  public class BlobsCleanupAgent
   {
     #region Fields
 
@@ -19,6 +20,12 @@ namespace Sitecore.Azure.Diagnostics.Tasks
     private readonly List<IBlobCleaner> blobsCleaners;
 
     #endregion 
+
+    #region Properties
+
+    public bool LogActivity { get; set; }
+
+    #endregion
 
     #region Constructors
 
@@ -69,6 +76,18 @@ namespace Sitecore.Azure.Diagnostics.Tasks
 
       var cleaner = new BlobCleaner(configNode);
       this.blobsCleaners.Add(cleaner);
+    }
+
+    #endregion
+
+    #region Private Methods
+
+    private void LogInfo(string message)
+    {
+      Assert.ArgumentNotNull((object) message, nameof (message));
+      if (!this.LogActivity)
+        return;
+      Log.Info(message, (object) this);
     }
 
     #endregion
